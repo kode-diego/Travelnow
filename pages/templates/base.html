@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Travel Now{% endblock %}</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{%  static 'css/materialize.min.css' %}"  media="screen,projection"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="teal">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">TravelNow</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+               <ul class="right hide-on-med-and-down">
+                <li>
+
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#search">Search</a>
+                </li>
+                <li>
+                  <a href="#popular">Popular Places</a>
+                </li>
+                <li>
+                  <a href="#gallery">Gallery</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#search">Search</a>
+        </li>
+        <li>
+          <a href="#popular">Popular Places</a>
+        </li>
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      {% block content %}
+      {% endblock %}
+
+
+
+      <!-- Footer -->
+      <footer class="section teal darken-2 white-text center">
+       <p class="flow-text"><small>TravelNow &copy; 2019 KODE Designed</small></p>
+      </footer>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
